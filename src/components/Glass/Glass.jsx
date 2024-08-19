@@ -157,46 +157,46 @@ const Glass = () => {
   //   let arrJsx = [<button></button>];
   return (
     <div className="container">
-      <div className="container">
-        <div>
-          <img
-            className="bg-center"
-            src="../../../img/glassesImage/background.jpg"
-            alt=""
-          />
-          <div>
-            <img
-              className="bg-contain"
-              src="./img/glassesImage/model.jpg"
-              alt=""
-            />
-          </div>
-        </div>
-      </div>
       <h2>TRY GLASSES APP ONLINE</h2>
 
-      <div className="flex space-x-5">
-        <div className="image w-8/12">
-          <img src={urlGlass} alt="" />
-        </div>
-        <div className="w-4/12 space-y-5">
-          {arrButton2.map((item, index) => {
-            console.log(item);
-            return (
-              <button
-                key={index}
-                className="flex items-center border py-2 px-5 rounded w-52 border-blue-500 border-2"
-                onClick={() => {
-                  setUrlGlass(item.duongDanHinhAnh);
-                }}
-              >
-                <img src={item.icon} alt="" />
-                {item.name}
-                <span className="ml-2 text-xl"></span>
-              </button>
-            );
-          })}
-          {/* <button>Crystall Black</button> */}
+      <div className=" container">
+        <img
+          className="bg-center overlay-image"
+          src="../../../img/glassesImage/background.jpg"
+          alt=""
+        />
+        <div className="flex space-x-8">
+          <img
+            className="flex w-50 h-80"
+            // className="bg-contain"
+            src="./img/glassesImage/model.jpg"
+            // src="../../../img/glassesImage/g9.jpg"
+            alt=""
+          />
+
+          {/* <div className="flex space-x-8"> */}
+          <div className=" w-40">
+            <img src={urlGlass} alt="" />
+          </div>
+          <div className=" w-10/12 space-y-2">
+            {arrButton2.map((item, index) => {
+              console.log(item);
+              return (
+                <button
+                  key={index}
+                  className=" items-center border py-2 px-14 rounded w-52 border-gray-500 border-1"
+                  onClick={() => {
+                    setUrlGlass(item.duongDanHinhAnh);
+                  }}
+                >
+                  <img src={item.icon} alt="" />
+                  {item.name}
+                  <span className="ml-2 text-xl"></span>
+                </button>
+              );
+            })}
+            {/* <button>Crystall Black</button> */}
+          </div>
         </div>
       </div>
     </div>

@@ -157,26 +157,35 @@ const Glass = () => {
   //   let arrJsx = [<button></button>];
   return (
     <div className="container">
-      <h2>TRY GLASSES APP ONLINE</h2>
-
       <div className=" container">
+        <h2>TRY GLASSES APP ONLINE</h2>
         <img
           className="bg-center overlay-image"
           src="../../../img/glassesImage/background.jpg"
           alt=""
         />
         <div className="flex space-x-8">
-          <img
+          {/* <img
             className="flex w-50 h-80"
             // className="bg-contain"
             src="./img/glassesImage/model.jpg"
-            // src="../../../img/glassesImage/g9.jpg"
+          
             alt=""
-          />
+          /> */}
 
           {/* <div className="flex space-x-8"> */}
-          <div className=" w-40">
-            <img src={urlGlass} alt="" />
+          <div className="w-36">
+            <img
+              className="flex w-50 h-80"
+              src="./img/glassesImage/model.jpg"
+              alt=""
+            />
+            <img
+              src={urlGlass}
+              className="absolute left-1/6 w-1/12 transform -translate-x-1/8 -translate-y-1/4 h-30"
+              // style={{ top: "32%", left: "50%", width: "40%" }}
+              alt=""
+            />
           </div>
           <div className=" w-10/12 space-y-2">
             {arrButton2.map((item, index) => {
